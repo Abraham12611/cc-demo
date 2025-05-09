@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Add a floating action button for "Create Certificate" */
+.floating-action-btn {
+  @apply fixed bottom-6 right-6 bg-neon-lilac hover:bg-opacity-80 text-white p-4 rounded-full shadow-lg z-20 flex items-center justify-center transition-all;
+}
+
+.floating-action-btn:hover {
+  @apply transform -translate-y-1;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
